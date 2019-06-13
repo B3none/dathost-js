@@ -1,0 +1,25 @@
+{
+  "name": "dathost-js",
+  "version": "1.0.0",
+  "description": "Dathost API wrapper written in JS",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b3none/dathost-js.git"
+  },
+  "keywords": [
+    "dathost"
+  ],
+  "author": "B3none",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b3none/dathost-js/issues"
+  },
+  "homepage": "https://github.com/b3none/dathost-js#readme",
+  "dependencies": {
+    "axios": "^0.19.0"
+  }
+}
