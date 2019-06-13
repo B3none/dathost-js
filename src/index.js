@@ -1,6 +1,7 @@
 import AxiosHelper from './helpers/axiosHelper';
 import AccountEndpoints from './endpoints/acountEndpoints';
 import ServerEndpoints from "./endpoints/serverEndpoints";
+import ServersEndpoints from "./endpoints/serversEndpoints";
 import DomainsEndpoints from './endpoints/domainsEndpoints';
 
 class Dathost {
@@ -24,8 +25,22 @@ class Dathost {
     return new DomainsEndpoints(this.axiosHelper);
   }
 
-  server() {
-    return new ServerEndpoints(this.axiosHelper);
+  /**
+   * Endpoints to do with a single server
+   *
+   * @returns {ServerEndpoints}
+   */
+  server(serverId) {
+    return new ServerEndpoints(this.axiosHelper, serverId);
+  }
+
+  /**
+   * Endpoints to do with multiple servers.
+   *
+   * @returns {ServersEndpoints}
+   */
+  servers() {
+    return new ServersEndpoints(this.axiosHelper);
   }
 }
 
